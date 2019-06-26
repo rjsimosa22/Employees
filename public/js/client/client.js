@@ -208,6 +208,7 @@ function getClearClient() {
     $('#Clientobservations').val('');
     $('#Clientobservations').text('');
     $("#btn-client").attr("disabled", false);
+    $('#ListClientSearch tr').removeClass('highlighted');
     $('.jquery-modal').fadeOut(500);
     
     var oTable = $('.ListClientRefres').dataTable();
@@ -230,7 +231,8 @@ function getClearClientNew() {
     $('#Clientobservationss').val('');
     $('#Clientobservationss').text('');
     $("#btn-client").attr("disabled", false);
-
+    $('#ListClientSearch tr').removeClass('highlighted');
+    
     var oTable = $('.ListClientRefres').dataTable();
     oTable.fnDraw(false);
 }

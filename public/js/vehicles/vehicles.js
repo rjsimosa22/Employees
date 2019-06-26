@@ -212,14 +212,15 @@ function getClearVehicles() {
     $("#Clientid").val('');
     $('#Vehcolour').val('');
     $('#Vehstatus').val('1');
-    $('#Clienttype').val('1');
     $('#Clientname').val('');
     $('#Vehcategory').val('');
     $("#ClientidNew").val('');
+    $('#Clienttype').val('1');
     $('#Clientdocument').val('');
     $('#Vehobservations').empty();
     $('#Vehobservations').text('');
     $("#btn-vehicle").attr("disabled", false);
+    $('#ListClientSearch tr').removeClass('highlighted');
     $('.jquery-modal').fadeOut(500);
 
     var oTable = $('.ListVehiclesRefres').dataTable();
@@ -245,6 +246,7 @@ function getClearVehiclesNew() {
     $('#Vehobservationss').empty();
     $('#Vehobservationss').text('');
     $("#btn-vehicle").attr("disabled", false);
+    $('#ListClientSearch tr').removeClass('highlighted');
 
     var oTable = $('.ListVehiclesRefres').dataTable();
     oTable.fnDraw(false);
