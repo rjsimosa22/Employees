@@ -1,0 +1,2 @@
+<a href="#editVehicle" rel="modal:open" data-toggle="tooltip"  data-id="{{ $id.'/'.$plate }}" title="Editar" class="edit btn btn-success edit-vehicle"><span class="fa fa-edit"></span></a>
+<a href="javascript:void(0);" id="delete-vehicle" data-toggle="tooltip" title="Eliminar" data-id="{{ $id.'/'.$plate  }}" class="delete btn btn-danger"><span class="fa fa-trash-o"></span></a>

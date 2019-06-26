@@ -11,12 +11,26 @@
 |
 */
 
+
+
+Auth::routes();
 Route::get('/', function () {
     return view('acces');
 });
 
 Route::resource('tasks', 'TaskController');
-
-Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('vehicles', 'VehiclesController');
+Route::resource('listVehicles', 'VehiclesController');
+Route::post('listVehicles/store', 'VehiclesController@store');
+Route::get('listVehicles/delete/{id}', 'VehiclesController@destroy');
+
+Route::resource('client', 'ClientController');
+Route::resource('listClient', 'ClientController');
+Route::post('listClient/store', 'ClientController@store');
+Route::post('listClient/search', 'ClientController@search');
+Route::get('listClient/delete/{id}', 'ClientController@destroy');
+
+
+

@@ -6,17 +6,17 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>SITAWEB</title>
         
-        <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+        <link rel="stylesheet" href="../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
-        <link rel="stylesheet" href="bower_components/jvectormap/jquery-jvectormap.css">
-        <link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.css">
-        <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
-        <link rel="stylesheet" href="css/jquery.modal.min.css" />
-        <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
-        <link rel="stylesheet" href="bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../bower_components/Ionicons/css/ionicons.min.css">
+        <link rel="stylesheet" href="../bower_components/jvectormap/jquery-jvectormap.css">
+        <link rel="stylesheet" href="../bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
+        <link rel="stylesheet" href="../css/jquery.modal.min.css" />
+        <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
+        <link rel="stylesheet" href="../bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
     </head>
 
@@ -88,27 +88,27 @@
             reserved.
         </footer>
         <script>var SITEURL = '{{URL::to('')}}';</script>
-        <script src="bower_components/jquery/dist/jquery.min.js"></script>
-        <script src="bower_components/jquery-ui/jquery-ui.js"></script>
-        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="bower_components/fastclick/lib/fastclick.js"></script>
-        <script src="bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
-        <script src="plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-        <script src="plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-        <script src="bower_components/raphael/raphael.min.js"></script>
-        <script src="bower_components/morris.js/morris.min.js"></script>
-        <script src="bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
-        <script src="bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-        <script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-        <script src="bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
-        <script src="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
-        <script src="bower_components/chart.js/Chart.js"></script>
-        <script src="dist/js/adminlte.min.js"></script>
-        <script src="dist/js/pages/dashboard.js"></script>
-        <script src="dist/js/demo.js"></script>
-        <script src="js/jquery.modal.min.js"></script>
-        <script src="js/common/common.js?v={{ time() }}"></script>
-        <script src="js/vehicles/vehicles.js?v={{ time() }}"></script>
-        <script src="js/client/client.js?v={{ time() }}"></script>
+        <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../bower_components/jquery-ui/jquery-ui.js"></script>
+        <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="../bower_components/fastclick/lib/fastclick.js"></script>
+        <script src="../bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+        <script src="../plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+        <script src="../plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+        <script src="../bower_components/raphael/raphael.min.js"></script>
+        <script src="../bower_components/morris.js/morris.min.js"></script>
+        <script src="../bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+        <script src="../bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
+        <script src="../bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
+        <script src="../bower_components/chart.js/Chart.js"></script>
+        <script src="../dist/js/adminlte.min.js"></script>
+        <script src="../dist/js/pages/dashboard.js"></script>
+        <script src="../dist/js/demo.js"></script>
+        <script src="../js/jquery.modal.min.js"></script>
+        <script src="../js/common/common.js?v={{ time() }}"></script>
+        <script src="../js/vehicles/vehicles.js?v={{ time() }}"></script>
+        <script src="../js/client/client.js?v={{ time() }}"></script>
     </body>
 </html>

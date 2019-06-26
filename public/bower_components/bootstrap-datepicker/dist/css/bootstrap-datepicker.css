@@ -420,6 +420,7 @@
 .datepicker .next,
 .datepicker tfoot tr th {
   cursor: pointer;
+
 }
 .datepicker .datepicker-switch:hover,
 .datepicker .prev:hover,

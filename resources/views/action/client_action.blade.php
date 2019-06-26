@@ -1,0 +1,2 @@
+<a href="#editClient" rel="modal:open" data-toggle="tooltip"  data-id="{{ $id.'/'.$name }}" title="Editar" class="edit btn btn-success edit-client"><span class="fa fa-edit"></span></a>
+<a href="javascript:void(0);" id="delete-client" data-toggle="tooltip" title="Eliminar" data-id="{{ $id.'/'.$name  }}" class="delete btn btn-danger"><span class="fa fa-trash-o"></span></a>

@@ -24,7 +24,7 @@ class TaskController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
+    {   
         return view('tasks.create');
     }
 
@@ -65,7 +65,7 @@ class TaskController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit(Task $task)
-    {
+    {   echo $task;exit();
         return view('tasks.edit',compact('task',$task));
     }
 
