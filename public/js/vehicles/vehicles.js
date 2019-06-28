@@ -7,7 +7,7 @@ $.ajaxSetup({
 $(document).ready( function () {
 
     $('#listVehicles').DataTable({
-        processing: false,
+        processing: true,
         serverSide: true,
         ajax: {
             url: SITEURL + "/listVehicles",
@@ -177,7 +177,7 @@ $(document).ready( function () {
         }
         
         var yes=1;
-        if(!Vehplate || !Vehcategory || !Vehmark || !Vehmodel || !Vehcolour || !Vehyear || !Vehmotor || !Vehserie || !Vehstatus || !Clientdocument || !Clientname || !Clientid) {
+        if(!Vehplate || !Vehcategory || !Vehmark || !Vehmodel || !Vehcolour || !Vehyear || !Vehmotor || !Vehserie || !Vehstatus || !Clientname || !Clientid) {
             yes=0;
         }    
       

@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
         <link rel="stylesheet" href="../css/jquery.modal.min.css" />
         <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
-        <link rel="stylesheet" href="../bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower_components/datatables.net-bs/css/dataTables.bootstrap.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
     </head>
 
@@ -97,7 +97,7 @@
         <script src="../plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
         <script src="../bower_components/raphael/raphael.min.js"></script>
         <script src="../bower_components/morris.js/morris.min.js"></script>
-        <script src="../bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="../bower_components/datatables.net/js/jquery.dataTables.js?v={{ time() }}"></script>
         <script src="../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
         <script src="../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
         <script src="../bower_components/jquery-knob/dist/jquery.knob.min.js"></script>

@@ -64,6 +64,7 @@ class VehiclesController extends Controller
                 'category'=>$Vehcategory,
                 'number_engine'=>$Vehmotor,
                 'number_series'=>$Vehserie,
+                'profile' => 'Administrador',
                 'observations'=>$Vehobservations
             ]
         ); 

@@ -8,7 +8,7 @@ $.ajaxSetup({
 $(document).ready( function () {
 
     $('#ListClient').DataTable({
-        processing: false,
+        processing: true,
         serverSide: true,
         ajax: {
             url: SITEURL + "/listClient",
@@ -28,8 +28,8 @@ $(document).ready( function () {
     });
     
     var tableClientSearch=$('#ListClientSearch').DataTable({
-        processing: false,
-        serverSide: false,
+        processing: true,
+        serverSide: true,
         ajax: {
             url: SITEURL + "/search",
             type: 'POST',
@@ -129,7 +129,7 @@ $(document).ready( function () {
     });
     
     $('body').on('click', '#btn-client', function () {
-
+     
         if($("#btn-client").val()=='edit') {
 
             var action='edit';
@@ -165,10 +165,10 @@ $(document).ready( function () {
         }
 
         var yes=1;
-        if(!Clientname || !Clienttype || !Clientdocument || !Clientphone) {
+        if(!Clientname || !Clientphone) {
             yes=0;
         } 
-
+    
         if(yes > 0) {
 
             $("#btn-client").attr("disabled", true);

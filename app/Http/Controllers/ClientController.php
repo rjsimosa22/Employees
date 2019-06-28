@@ -68,6 +68,7 @@ class ClientController extends Controller
                 'status' => $Clientstatus,
                 'contact' => $Clientcontact,
                 'address' => $Clientaddress,
+                'profile' => 'Administrador',
                 'document' => $Clientdocument,
                 'birthdate' => $Clientbirthdate,
                 'anniversary' => $Clientanniversary,

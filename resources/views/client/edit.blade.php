@@ -17,21 +17,21 @@
                         <div class="box-body">
                             <div class="col-md-12">
                                 <div class="form-group col-md-4">
-                                    <label for="nombre">Nombre</label>
+                                    <label for="nombre">Nombre<label style="color:red">*</label></label>
                                     <input type="text" class="form-control mayusc" name="Clientname" id="Clientname" placeholder="Ingresar nombre" required>
                                 </div>
     
                                 <div class="form-group col-md-4">
-                                    <label for="tipo">Tipo</label>
-                                    <select class="form-control" name="Clienttype" id="Clienttype" required>
+                                    <label for="tipo">Tipo<label style="color:red">&nbsp;</label></label>
+                                    <select class="form-control" name="Clienttype" id="Clienttype">
                                         <option value="1">D.N.I</option>
                                         <option value="2">RUC</option>
                                     </select>    
                                 </div>
 
                                 <div class="form-group col-md-4">
-                                    <label for="documento">Documento</label>
-                                    <input type="text" class="form-control mayusc" name="Clientdocument" id="Clientdocument" placeholder="Ingresar documento" required>
+                                    <label for="documento">Documento<label style="color:red">&nbsp;</label></label>
+                                    <input type="text" class="form-control mayusc" name="Clientdocument" id="Clientdocument" placeholder="Ingresar documento">
                                 </div>
                             </div>  
                                 
@@ -44,17 +44,17 @@
 
                             <div class="col-md-12">
                                 <div class="form-group col-md-4">
-                                    <label for="teléfono">Teléfono</label>
+                                    <label for="teléfono">Teléfono<label style="color:red">*</label></label>
                                     <input type="text" class="form-control mayusc" name="Clientphone" id="Clientphone" placeholder="Ingresar teléfono" required>
                                 </div>
 
                                 <div class="form-group col-md-4">
-                                    <label for="email">Email</label>
+                                    <label for="email">Email<label style="color:red">&nbsp;</label></label>
                                     <input type="text" class="form-control mayusc" name="Clientemail" id="Clientemail" placeholder="Ingresar email">
                                 </div>
 
                                 <div class="form-group col-md-4">
-                                    <label for="contacto">Contacto</label>
+                                    <label for="contacto">Contacto<label style="color:red">&nbsp;</label></label>
                                     <input type="text" class="form-control mayusc" name="Clientcontact" id="Clientcontact" placeholder="Ingresar email">
                                 </div>
                             </div>
@@ -91,7 +91,7 @@
                             <label style="color:red">(*) Todos los campos son requeridos.</label>
                               
                             <center>
-                                <button type="submit" class="btn btn-primary" id='btn-client' value="create" onclick="javascript:void(0);">Editar</button>
+                                <button type="submit" class="btn btn-primary" id='btn-client' onclick="javascript:void(0);">Editar</button>
                                 <button type="reset" class="btn btn-default" onclick="getClearClient()">Cerrar</button>
                             </center>
                         </div>                          

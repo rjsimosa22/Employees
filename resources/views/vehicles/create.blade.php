@@ -111,7 +111,7 @@
                             <div class="box-body">
                                 <div class="col-md-12">
                                     <div class="form-group col-md-4">
-                                        <label for="estatus">Tipo de Documento<label style="color:red">*</label></label>
+                                        <label for="estatus">Tipo de Documento<label style="color:red">&nbsp;</label></label>
                                         <select class="form-control mayusc" id="Clienttypes">
                                             <option value="1">D.N.I</option>
                                             <option value="2">RUC</option>
@@ -119,8 +119,8 @@
                                     </div>
     
                                     <div class="form-group col-md-4">
-                                        <label for="DNI">Nro. de Documento<label style="color:red">*</label></label>
-                                        <input type="text" class="form-control mayusc" id="Clientdocuments" placeholder="Ingresar documento" required disabled>
+                                        <label for="DNI">Nro. de Documento<label style="color:red">&nbsp;</label></label>
+                                        <input type="text" class="form-control mayusc" id="Clientdocuments" placeholder="Ingresar documento" disabled>
                                     </div>
                
                                     <div class="form-group col-md-4">

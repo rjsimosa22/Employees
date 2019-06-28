@@ -21,51 +21,51 @@
                         <div class="box-body">
                             <div class="col-md-12">
                                 <div class="form-group col-md-4">
-                                    <label for="placa">Placa</label>
+                                    <label for="placa">Placa<label style="color:red">*</label></label>
                                     <input type="text" class="form-control mayusc" name="Vehplate" id="Vehplate" placeholder="Ingresar placa" required>
                                 </div>
     
                                 <div class="form-group col-md-4">
-                                    <label for="categoria">Categoría</label>
+                                    <label for="categoria">Categoría<label style="color:red">*</label></label>
                                     <select class="form-control mayusc" name="Vehcategory" id="Vehcategory" required></select>       
                                 </div>
     
                                 <div class="form-group col-md-4">
-                                    <label for="marca">Marca</label>
+                                    <label for="marca">Marca<label style="color:red">*</label></label>
                                     <select class="form-control mayusc" name="Vehmark" id="Vehmark" required onchange="models('Vehmodel','Vehmark');"></select>   
                                 </div>
                             </div>  
                                 
                             <div class="col-md-12">
                                 <div class="form-group col-md-4">
-                                    <label for="modelo">Modelo</label>
+                                    <label for="modelo">Modelo<label style="color:red">*</label></label>
                                     <select class="form-control mayusc" name="Vehmodel" id="Vehmodel" required></select>  
                                 </div>
         
                                 <div class="form-group col-md-4">
-                                    <label for="color">Color</label>
+                                    <label for="color">Color<label style="color:red">*</label></label>
                                     <input type="text" class="form-control mayusc" name="Vehcolour" id="Vehcolour" placeholder="Ingresar color" required>
                                 </div>
         
                                 <div class="form-group col-md-4">
-                                    <label for="ano">Año</label>
+                                    <label for="ano">Año<label style="color:red">*</label></label>
                                     <input type="text" class="form-control mayusc" name="Vehyear" id="Vehyear" placeholder="Ingresar año" required>
                                 </div>
                             </div>
     
                             <div class="col-md-12">
                                 <div class="form-group col-md-4">
-                                    <label for="motor">Nro. Motor</label>
+                                    <label for="motor">Nro. Motor<label style="color:red">*</label></label>
                                     <input type="text" class="form-control mayusc" name="Vehmotor" id="Vehmotor" placeholder="Ingresar nro. motor" required>
                                 </div>
             
                                 <div class="form-group col-md-4">
-                                    <label for="serie">Nro. Serie</label>
+                                    <label for="serie">Nro. Serie<label style="color:red">*</label></label>
                                     <input type="text" class="form-control mayusc" name="Vehserie" id="Vehserie" placeholder="Ingresar nro. serie" required>
                                 </div>
     
                                 <div class="form-group col-md-4">
-                                    <label for="estatus">Estatus</label>
+                                    <label for="estatus">Estatus<label style="color:red">*</label></label>
                                     <select class="form-control mayusc" name="Vehstatus" id="Vehstatus" required>
                                         <option value="1">Activo</option>
                                         <option value="0">Inactivo</option>
@@ -97,7 +97,7 @@
                         <div class="box-body">
                             <div class="col-md-12">
                                 <div class="form-group col-md-4">
-                                    <label for="estatus">Tipo de Documento</label>
+                                    <label for="estatus">Tipo de Documento<label style="color:red">&nbsp;</label></label>
                                     <select class="form-control mayusc" id="Clienttype">
                                         <option value="1">D.N.I</option>
                                         <option value="2">RUC</option>
@@ -105,13 +105,13 @@
                                 </div>
 
                                 <div class="form-group col-md-4">
-                                    <label for="DNI">Nro. de Documento</label>
-                                    <input type="text" class="form-control mayusc" id="Clientdocument" placeholder="Ingresar documento" required>
+                                    <label for="DNI">Nro. de Documento<label style="color:red">&nbsp;</label></label>
+                                    <input type="text" class="form-control mayusc" id="Clientdocument" placeholder="Ingresar documento" disabled>
                                 </div>
            
                                 <div class="form-group col-md-4">
-                                    <label for="Clientname">Nombre(s)</label>
-                                    <input type="text" class="form-control mayusc" id="Clientname" placeholder="Ingresar nombre" required>
+                                    <label for="Clientname">Nombre(s)<label style="color:red">*</label></label>
+                                    <input type="text" class="form-control mayusc" id="Clientname" placeholder="Ingresar nombre" disabled required>
                                 </div>
                             </div>
                         </div>
