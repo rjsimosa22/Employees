@@ -38,7 +38,7 @@
         
                                     <div class="form-group col-md-4">
                                         <label for="marca">Marca<label style="color:red">*</label></label>
-                                        <select class="form-control mayusc" name="Vehmarks" id="Vehmarks" required>
+                                        <select class="form-control mayusc" name="Vehmarks" id="Vehmarks" required onchange="models('Vehmodels','Vehmarks');">
                                             <option value="">Seleccionar</option>
                                             @foreach($marks as $mark)
                                                 <option value="{{ $mark->id }}">{{ $mark->description }}</option>
@@ -52,10 +52,7 @@
                                         <label for="modelo">Modelo<label style="color:red">*</label></label>
                                         <select class="form-control mayusc" name="Vehmodels" id="Vehmodels" required>    
                                             <option value="">Seleccionar</option>
-                                                @foreach($models as $model)
-                                                    <option value="{{ $model->id }}">{{ $model->description }}</option>
-                                                @endforeach
-                                            </option>
+                                         
                                         </select>    
                                     </div>
 

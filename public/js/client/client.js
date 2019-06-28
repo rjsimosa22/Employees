@@ -31,8 +31,8 @@ $(document).ready( function () {
         processing: false,
         serverSide: false,
         ajax: {
-            url: SITEURL + "/listClient",
-            type: 'GET',
+            url: SITEURL + "/search",
+            type: 'POST',
         },
 
         columns: [
@@ -42,6 +42,7 @@ $(document).ready( function () {
             { data: 'document' },
             { data: 'name'},
             { data: 'description'},
+            { data: 'action' },
         ],
         order: [[0, 'desc']]
         
@@ -68,6 +69,8 @@ $(document).ready( function () {
 
         // modificar
         $("#searchClient").modal("hide");
+        $("body").removeAttr("style");
+        $('.jquery-modal').fadeOut(500);
         $("#editVehicle").modal("show");
     });
 
@@ -109,7 +112,7 @@ $(document).ready( function () {
         
         if(confirm("Está seguro que desea eliminar el registro del CLIENTE: "+client_name.toUpperCase()+" !")) {
             $.ajax({
-                type: "get",
+                type: "GET",
                 url: SITEURL + "/listClient/delete/"+client_id,
                 success: function (data) {
                     $('#mensSuccess').text('El cliente '+client_name.toUpperCase()+' se eliminó correctamente...');
@@ -208,8 +211,12 @@ function getClearClient() {
     $('#Clientobservations').val('');
     $('#Clientobservations').text('');
     $("#btn-client").attr("disabled", false);
-    $('#ListClientSearch tr').removeClass('highlighted');
+
+    // Modal
+    $("body").removeAttr("style");
     $('.jquery-modal').fadeOut(500);
+    $('#ListClientSearch tr').removeClass('highlighted');
+    
     
     var oTable = $('.ListClientRefres').dataTable();
     oTable.fnDraw(false);
@@ -231,6 +238,10 @@ function getClearClientNew() {
     $('#Clientobservationss').val('');
     $('#Clientobservationss').text('');
     $("#btn-client").attr("disabled", false);
+
+    // Modal
+    $("body").removeAttr("style");
+    $('.jquery-modal').fadeOut(500);
     $('#ListClientSearch tr').removeClass('highlighted');
     
     var oTable = $('.ListClientRefres').dataTable();

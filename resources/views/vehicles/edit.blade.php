@@ -32,7 +32,7 @@
     
                                 <div class="form-group col-md-4">
                                     <label for="marca">Marca</label>
-                                    <select class="form-control mayusc" name="Vehmark" id="Vehmark" required></select>   
+                                    <select class="form-control mayusc" name="Vehmark" id="Vehmark" required onchange="models('Vehmodel','Vehmark');"></select>   
                                 </div>
                             </div>  
                                 

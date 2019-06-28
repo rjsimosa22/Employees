@@ -22,14 +22,15 @@ Route::resource('tasks', 'TaskController');
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('vehicles', 'VehiclesController');
+Route::post('models', 'VehiclesController@models');
 Route::resource('listVehicles', 'VehiclesController');
 Route::post('listVehicles/store', 'VehiclesController@store');
 Route::get('listVehicles/delete/{id}', 'VehiclesController@destroy');
 
 Route::resource('client', 'ClientController');
+Route::post('search', 'ClientController@search');
 Route::resource('listClient', 'ClientController');
 Route::post('listClient/store', 'ClientController@store');
-Route::post('listClient/search', 'ClientController@search');
 Route::get('listClient/delete/{id}', 'ClientController@destroy');
 
 

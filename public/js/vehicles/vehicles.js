@@ -40,28 +40,34 @@ $(document).ready( function () {
             $('#btn-vehicle').val('edit');
 
             // Combo de categoria
-            var categories = data.categories;
-            var select = document.getElementsByName('Vehcategory')[0];
+            $('#Vehcategory').val('');
+            $('#Vehcategory').empty();
+            var categories=data.categories;
+            var select=document.getElementsByName('Vehcategory')[0];
 
             for (value in categories) {
-             var option = document.createElement("option");
-             option.value = categories[value]['id'];
-             option.text = categories[value]['description'];
-             select.add(option);
+                var option=document.createElement("option");
+                    option.value=categories[value]['id'];
+                    option.text=categories[value]['description'];
+                    select.add(option);
             }
 
             // Combo de marca
-            var marks = data.marks;
-            var select = document.getElementsByName('Vehmark')[0];
+            $('#Vehmark').val('');
+            $('#Vehmark').empty();
+            var marks=data.marks;
+            var select=document.getElementsByName('Vehmark')[0];
             
             for (value in marks) {
-             var option = document.createElement("option");
-             option.value = marks[value]['id'];
-             option.text = marks[value]['description'];
-             select.add(option);
+                var option=document.createElement("option");
+                    option.value=marks[value]['id'];
+                    option.text=marks[value]['description'];
+                    select.add(option);
             }
 
             // Combo de modelo
+            $('#Vehmodel').val('');
+            $('#Vehmodel').empty();
             var models = data.models;
             var select = document.getElementsByName('Vehmodel')[0];
             
@@ -197,8 +203,41 @@ $(document).ready( function () {
                 }
             });
         }  
-    });
+    });   
 });
+
+function models(models,marks) {
+    
+    $('#'+models).val('');
+    $('#'+models).empty();
+    
+    $("#"+marks+" option:selected").each(function () {
+        id=$(this).val();
+        $.post(SITEURL + "/models",{"id":id},function(data){
+          
+            if(data.length > 0) {
+                
+                var select=document.getElementsByName(models)[0];
+                
+                for (value in data) {
+                    var option=document.createElement("option");
+                        option.value=data[value]['id'];
+                        option.text=data[value]['description'];
+                        select.add(option);
+                }
+                
+            } else {
+
+                var select=document.getElementsByName(models)[0];
+                var option=document.createElement("option");
+                    option.value='0';
+                    option.text='No hay registro';
+                    select.add(option);
+            }    
+        });		
+       
+    });
+}
 
 function getClearVehicles() {
 
@@ -220,9 +259,12 @@ function getClearVehicles() {
     $('#Vehobservations').empty();
     $('#Vehobservations').text('');
     $("#btn-vehicle").attr("disabled", false);
-    $('#ListClientSearch tr').removeClass('highlighted');
-    $('.jquery-modal').fadeOut(500);
 
+    // Modal
+    $("body").removeAttr("style");
+    $('.jquery-modal').fadeOut(500);
+    $('#ListClientSearch tr').removeClass('highlighted');
+    
     var oTable = $('.ListVehiclesRefres').dataTable();
     oTable.fnDraw(false);
 }
@@ -246,6 +288,10 @@ function getClearVehiclesNew() {
     $('#Vehobservationss').empty();
     $('#Vehobservationss').text('');
     $("#btn-vehicle").attr("disabled", false);
+
+    // Modal
+    $("body").removeAttr("style");
+    $('.jquery-modal').fadeOut(500);
     $('#ListClientSearch tr').removeClass('highlighted');
 
     var oTable = $('.ListVehiclesRefres').dataTable();

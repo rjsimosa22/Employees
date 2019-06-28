@@ -24,7 +24,8 @@ class HomeController extends Controller
     public function index()
     {
         //$request->user()->authorizeRoles(['user', 'admin']);
-        
-        return view('home');
+        $options='Home';
+        $selects='Home';
+        return view('home',['options'=>$options,'selects'=>$selects]);
     }
 }

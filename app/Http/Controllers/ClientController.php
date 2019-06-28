@@ -8,40 +8,41 @@ use Redirect,Response;
  
 class ClientController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
-    {
+    {   
+        $options='Client';
+        $selects='ClientList';
         if(request()->ajax()) {
-            return datatables()->of(Client::select('a.id','a.name','a.document','a.type as idtype','a.phone','c.description as type','b.description')->from('clients as a')->join('status_globals as b','a.status','=','b.id')->join('type_document as c','a.type','=','c.id')->get())
+            return datatables()->of(Client::select('a.id','a.name','a.document','a.type as idtype','a.phone','c.description as type','b.description')->from('clients as a')->join('status_globals as b','a.status','=','b.id')->join('type_document as c','a.type','=','c.id')->orderBy('a.name', 'asc')->get())
             ->addColumn('action', 'action/client_action')
             ->rawColumns(['action'])
             ->addIndexColumn()
             ->make(true);
         }
        
-        return view('client.index');
-    }
-    
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-    */
-    public function create()
-    {   
-        return view('client.create');
+        return view('client.index',['options'=>$options,'selects'=>$selects]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    public function search()
+    { 
+        if(request()->ajax()) {
+            return datatables()->of(Client::select('a.id','a.name','a.document','a.type as idtype','a.phone','c.description as type','b.description')->from('clients as a')->join('status_globals as b','a.status','=','b.id')->join('type_document as c','a.type','=','c.id')->get())
+            ->addColumn('action', 'action/clientSearch_action')
+            ->rawColumns(['action'])
+            ->addIndexColumn()
+            ->make(true);
+        }
+       
+        return view('client.search');
+    }
+    
+    public function create()
+    {   
+        $options='Client';
+        $selects='ClientRegister';
+        return view('client.create',['options'=>$options,'selects'=>$selects]);
+    }
+
     public function store(Request $request)
     {   
         $Clientid = $request->Clientid;
@@ -76,13 +77,6 @@ class ClientController extends Controller
         return Response::json($client);
     }
     
-    
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Product  $product
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {   
         $where = array('id' => $id);
@@ -90,12 +84,6 @@ class ClientController extends Controller
         return Response::json($client);
     }
     
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Product  $product
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         $client = Client::where('id',$id)->delete();
