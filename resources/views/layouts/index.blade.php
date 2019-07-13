@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
         <link rel="stylesheet" href="bower_components/jvectormap/jquery-jvectormap.css">
         <link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.css">
-        <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+        <link rel="stylesheet" href="dist/css/AdminLTE.css">
         <link rel="stylesheet" href="css/jquery.modal.min.css" />
         <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
         <link rel="stylesheet" href="bower_components/datatables.net-bs/css/dataTables.bootstrap.css">
@@ -108,8 +108,10 @@
             <script src="dist/js/demo.js"></script>
             <script src="js/jquery.modal.min.js"></script>
             <script src="js/common/common.js?v={{ time() }}"></script>
-            <script src="js/vehicles/vehicles.js?v={{ time() }}"></script>
+            <script src="js/user/user.js?v={{ time() }}"></script>
+            <script src="js/system/system.js?v={{ time() }}"></script>
             <script src="js/client/client.js?v={{ time() }}"></script>
+            <script src="js/vehicle/vehicle.js?v={{ time() }}"></script>
         </div>
     </body>
 </html>

@@ -1,3 +1,8 @@
+<?php 
+    //if(Auth::user()->name) {
+      //  echo '<script>window.location = "http://localhost/employees/public/home";</script>';
+    //}
+?>
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
