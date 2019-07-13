@@ -2,70 +2,75 @@
  
 namespace App\Http\Controllers;
  
-use App\User;
+
+use App\Users;
+use App\status;
+use App\Privileges;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Redirect,Response;
  
 class UsersController extends Controller
 {
-/**
- * Display a listing of the resource.
- *
- * @return \Illuminate\Http\Response
- */
-public function index()
-{
-    if(request()->ajax()) {
-        return datatables()->of(User::select('id','name','email','created_at'))
-        ->addColumn('action', 'action_button')
-        ->rawColumns(['action'])
-        ->addIndexColumn()
-        ->make(true);
+
+    public function index()
+    {   
+        $options='Users';
+        $selects='UsersList';
+        if(request()->ajax()) {
+            return datatables()->of(Users::select('a.id','a.name','a.email','b.description as status','c.description')->from('users as a')->join('status_globals as b','a.status','=','b.id')->join('privileges as c','a.id_privileges','=','c.id')->orderBy('a.name', 'asc')->get())
+            ->addColumn('action', 'action/user_action')
+            ->rawColumns(['action'])
+            ->addIndexColumn()
+            ->make(true);
+        }
+        
+        return view('User.index',['options'=>$options,'selects'=>$selects]);
     }
-    return view('list');
-}
- 
- 
-/**
- * Store a newly created resource in storage.
- *
- * @param  \Illuminate\Http\Request  $request
- * @return \Illuminate\Http\Response
- */
-public function store(Request $request)
-{  
-    $userId = $request->user_id;
-    $user   =   User::updateOrCreate(['id' => $userId],
-                ['name' => $request->name, 'email' => $request->email]);        
-    return Response::json($user);
-}
- 
- 
-/**
- * Show the form for editing the specified resource.
- *
- * @param  \App\Product  $product
- * @return \Illuminate\Http\Response
- */
-public function edit($id)
-{   
-    $where = array('id' => $id);
-    $user  = User::where($where)->first();
- 
-    return Response::json($user);
-}
- 
- 
-/**
- * Remove the specified resource from storage.
- *
- * @param  \App\Product  $product
- * @return \Illuminate\Http\Response
- */
-public function destroy($id)
-{
-    $user = User::where('id',$id)->delete();
- 
-    return Response::json($user);
-}
+
+    public function create()
+    {   
+        $options='Users';
+        $selects='UsersRegister';
+        $status=Status::select('a.id','a.description')->from('status_globals as a')->orderby('a.description')->get();
+        $privileges=Privileges::select('a.id','a.description')->from('privileges as a')->orderby('a.description')->get();
+        return view('user.create',['status'=>$status,'privileges'=>$privileges,'options'=>$options,'selects'=>$selects]);
+    }
+    
+    public function store(Request $request)
+    {  
+        $Userid=$request->Userid;
+        $Username=$request->Username;
+        $Useruser=$request->Useruser;
+        $Userstatus=$request->Userstatus;
+        $Userprofile=$request->Userprofile;
+        $Userpassword=Hash::make($request->Userpassword);
+
+        $user   =   Users::updateOrCreate(
+            ['id' => $Userid],
+            [
+                'name' => $Username, 
+                'email' => $Useruser,
+                'status' => $Userstatus,
+                'password' => $Userpassword,
+                'id_privileges' => $Userprofile,
+            ]
+        );        
+        return Response::json($user);
+    }
+    
+    public function edit($id)
+    {   
+        $where=array('id' => $id);
+        $user=Users::where($where)->first();
+        $status=Status::select('a.id','a.description')->from('status_globals as a')->orderby('a.description')->get();
+        $privileges=Privileges::select('a.id','a.description')->from('privileges as a')->orderby('a.description')->get();
+        return Response::json(['user'=>$user,'status'=>$status,'privileges'=>$privileges]);
+    }
+    
+    public function destroy($id)
+    {
+        $user = Users::where('id',$id)->delete();
+        return Response::json($user);
+    }
 }

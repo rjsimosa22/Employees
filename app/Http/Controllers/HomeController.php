@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Cache;
+use App\Home;
 use Illuminate\Http\Request;
+
 
 class HomeController extends Controller
 {
@@ -23,9 +26,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        //$request->user()->authorizeRoles(['user', 'admin']);
         $options='Home';
         $selects='Home';
+        $homes=Cache::put('key',Home::select('a.id','a.name','a.description','a.route','a.selects')->from('tables_system as a')->orderby('a.description')->get());
         return view('home',['options'=>$options,'selects'=>$selects]);
     }
 }
