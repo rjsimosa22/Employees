@@ -181,6 +181,7 @@ function getClearSystem() {
     $("#btn-system").attr("disabled", false);
 
     // Modal
+    $("body").removeAttr("style");
     $('.jquery-modal').fadeOut(500);
     
     var oTable = $('.ListSystemRefres').dataTable();

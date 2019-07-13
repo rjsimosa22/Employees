@@ -35,6 +35,10 @@ body {
   content: " ";
   display: table;
 }
+.viewInp {
+  border:none;
+  background:none;
+}
 .wrapper:after {
   clear: both;
 }
@@ -1384,6 +1388,12 @@ a:focus {
 .progress.vertical.xxs,
 .progress.vertical.progress-xxs {
   width: 3px;
+}
+.mayuscInit{
+  text-transform: capitalize
+}
+.mayusc{
+  text-transform: uppercase
 }
 .progress-group .progress-text {
   font-weight: 600;

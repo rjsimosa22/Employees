@@ -195,6 +195,7 @@ function getClearUsers() {
     $('.jquery-modal').fadeOut(500);
     $("#btn-user").attr("disabled", false);
 
+    $("body").removeAttr("style");
     var oTable = $('.listUserRefres').dataTable();
     oTable.fnDraw(false);
 }
@@ -210,6 +211,7 @@ function getClearUsersNew() {
     $("#Userpassword2s").val('');
     $("#btn-user").attr("disabled", false);
 
+    $("body").removeAttr("style");
     var oTable = $('.listUserRefres').dataTable();
     oTable.fnDraw(false);
 }
