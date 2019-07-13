@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use DB;
 use App\System;
-use App\status;
+use App\Status;
 use Illuminate\Http\Request;
 use Redirect,Response;
 

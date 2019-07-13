@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
  
 
 use App\Users;
-use App\status;
+use App\Status;
 use App\Privileges;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -25,7 +25,7 @@ class UsersController extends Controller
             ->make(true);
         }
         
-        return view('User.index',['options'=>$options,'selects'=>$selects]);
+        return view('user.index',['options'=>$options,'selects'=>$selects]);
     }
 
     public function create()
