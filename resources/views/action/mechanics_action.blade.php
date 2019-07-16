@@ -1,0 +1,2 @@
+<a href="#editMechanics" rel="modal:open" data-toggle="tooltip"  data-id="{{$id.'/'.$description}}" title="Editar" class="edit btn btn-success edit-mechanics"><span class="fa fa-edit"></span></a>
+<a href="javascript:void(0);" id="delete-mechanics" data-toggle="tooltip" title="Eliminar" data-id="{{$id.'/'.$description}}" class="delete btn btn-danger"><span class="fa fa-trash-o"></span></a>

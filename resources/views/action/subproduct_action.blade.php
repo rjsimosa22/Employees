@@ -1,0 +1,2 @@
+<a href="#editSubProduct" rel="modal:open" data-toggle="tooltip"  data-id="{{ $id.'/'.$description }}" title="Editar" class="edit btn btn-success edit-subproduct"><span class="fa fa-edit"></span></a>
+<a href="javascript:void(0);" id="delete-subproduct" data-toggle="tooltip" title="Eliminar" data-id="{{ $id.'/'.$description  }}" class="delete btn btn-danger"><span class="fa fa-trash-o"></span></a>

@@ -24,7 +24,7 @@
         
                                     <div class="form-group col-md-4">
                                         <label for="placa">Abreviación<label style="color:red">*</label></label>
-                                        <input type="text" class="form-control mayusc" name="Systemabreviation" id="Systemabreviation" placeholder="Ingresar usuario" required>
+                                        <input type="text" class="form-control mayusc" name="Systemabreviation" id="Systemabreviation" placeholder="Ingresar Abreviación" required>
                                     </div>
                                             
                                     <div class="form-group col-md-4">

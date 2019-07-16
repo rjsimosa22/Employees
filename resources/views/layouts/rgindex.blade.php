@@ -108,9 +108,12 @@
         <script src="../dist/js/demo.js"></script>
         <script src="../js/jquery.modal.min.js"></script>
         <script src="../js/user/user.js?v={{ time() }}"></script>
+        <script src="../js/coins/coins.js?v={{ time() }}"></script>
         <script src="../js/system/system.js?v={{ time() }}"></script>
         <script src="../js/common/common.js?v={{ time() }}"></script>
         <script src="../js/client/client.js?v={{ time() }}"></script>
         <script src="../js/vehicle/vehicle.js?v={{ time() }}"></script>
+        <script src="../js/advisors/advisors.js?v={{ time() }}"></script>
+        <script src="../js/subproduct/subproduct.js?v={{ time() }}"></script>
     </body>
 </html>
