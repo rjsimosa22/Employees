@@ -48,6 +48,50 @@ Route::resource('listSystem', 'SystemController');
 Route::post('listSystem/store', 'SystemController@store');
 Route::get('listSystem/delete/{id}', 'SystemController@destroy');
 
+// Coins
+Route::post('add', 'CoinsController@add');
+Route::resource('coins', 'CoinsController');
+Route::resource('listCoins', 'CoinsController');
+Route::post('listCoins/store', 'CoinsController@store');
+Route::get('listCoins/delete/{id}', 'CoinsController@destroy');
+
+// Advisors
+Route::post('add', 'AdvisorsController@add');
+Route::resource('advisors', 'AdvisorsController');
+Route::resource('listAdvisors', 'AdvisorsController');
+Route::post('listAdvisors/store', 'AdvisorsController@store');
+Route::get('listAdvisors/delete/{id}', 'AdvisorsController@destroy');
+
+// SubProducts
+Route::post('add', 'SubProductsController@add');
+Route::resource('SubProducts', 'SubProductsController');
+Route::resource('listSubProducts', 'SubProductsController');
+Route::post('listSubProducts/store', 'SubProductsController@store');
+Route::get('listSubProducts/delete/{id}', 'SubProductsController@destroy');
+
+// Items
+Route::post('add', 'ItemsController@add');
+Route::resource('items', 'ItemsController');
+Route::resource('listItems', 'ItemsController');
+Route::post('listItems/store', 'ItemsController@store');
+Route::get('listItems/delete/{id}', 'ItemsController@destroy');
+
+// Mechanics
+Route::post('add', 'MechanicsController@add');
+Route::resource('mechanics', 'MechanicsController');
+Route::resource('listMechanics', 'MechanicsController');
+Route::post('listMechanics/store', 'MechanicsController@store');
+Route::get('listMechanics/delete/{id}', 'MechanicsController@destroy');
+
+// Movements Cash
+Route::post('add', 'MovementsCashController@add');
+Route::resource('MovementsCash', 'MovementsCashController');
+Route::resource('listMovementsCash', 'MovementsCashController');
+Route::post('listMovementsCash/store', 'MovementsCashController@store');
+Route::get('listMovementsCash/delete/{id}', 'MovementsCashController@destroy');
+
+
+
 
 
 
