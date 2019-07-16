@@ -99,7 +99,6 @@ $(document).ready( function () {
         });		
     });
     
-
     // Eliminar system
     $('body').on('click', '#delete-system', function () {
         var system=$(this).data("id").split('/');
@@ -144,7 +143,7 @@ $(document).ready( function () {
         var Systemabreviation=$('#Systemabreviation').val();
 
         var yes=1;
-        if(!Systemdescription || !Systemabreviation || !Systemstatus) {
+        if(!Systemdescription || !Systemabreaviation || !Systemstatus) {
             yes=0;
         } 
     
