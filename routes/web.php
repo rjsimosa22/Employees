@@ -59,12 +59,6 @@ Route::resource('listAdvisors', 'AdvisorsController');
 Route::post('listAdvisors/store', 'AdvisorsController@store');
 Route::get('listAdvisors/delete/{id}', 'AdvisorsController@destroy');
 
-// SubProducts
-Route::resource('SubProducts', 'SubProductsController');
-Route::resource('listSubProducts', 'SubProductsController');
-Route::post('listSubProducts/store', 'SubProductsController@store');
-Route::get('listSubProducts/delete/{id}', 'SubProductsController@destroy');
-
 // Items
 Route::resource('items', 'ItemsController');
 Route::resource('listItems', 'ItemsController');
@@ -82,6 +76,12 @@ Route::resource('MovementsCash', 'MovementsCashController');
 Route::resource('listMovementsCash', 'MovementsCashController');
 Route::post('listMovementsCash/store', 'MovementsCashController@store');
 Route::get('listMovementsCash/delete/{id}', 'MovementsCashController@destroy');
+
+// SubProducts
+Route::resource('SubProducts', 'SubProductsController');
+Route::resource('listSubProducts', 'SubProductsController');
+Route::post('listSubProducts/store', 'SubProductsController@store');
+Route::get('listSubProducts/delete/{id}', 'SubProductsController@destroy');
 
 
 
