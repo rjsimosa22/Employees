@@ -15,7 +15,6 @@ class ItemsController extends Controller
 
     public function index()
     {  
-     
         $options='system';
         $selects='ItemList';
         if(request()->ajax()) {
@@ -71,14 +70,6 @@ class ItemsController extends Controller
         $types_items=Types_Items::select('a.id','a.description')->from('types_items as a')->orderby('a.description')->get();        
         $items=Items::select('a.id','a.description','a.abreviation','a.id_coins','a.id_types_items','a.price','a.id_status as status')->from('vw_items as a')->orderby('a.description')->where('a.id','=',$id)->get();        
         return Response::json(['items'=>$items,'types_items'=>$types_items,'coins'=>$coins,'status'=>$status]);
-    }
-    
-    public function add()
-    {   
-        $coins=Coins::select('a.id','a.symbol')->from('coins as a')->orderby('a.description')->get();
-        $status=Status::select('a.id','a.description')->from('status_globals as a')->orderby('a.description')->get();
-        $types_items=Types_Items::select('a.id','a.description')->from('types_items as a')->orderby('a.description')->get();        
-        return Response::json(['types_items'=>$types_items,'coins'=>$coins,'status'=>$status]);
     }
     
     public function destroy($id)

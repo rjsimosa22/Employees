@@ -8,7 +8,7 @@
  
     <section class="content-header">
         <h1>Listado de {{$module}}</h1>
-        <div style="margin-top:10px" align='right'><a href="#editSystem" rel="modal:open" data-toggle="tooltip" title="Agregar" class="edit btn btn-primary add-system">Agregar</a></div>
+        <div style="margin-top:10px" align='right'><a href="#editSystem" rel="modal:open" data-id="0" data-toggle="tooltip" title="Agregar" class="add btn btn-primary add-system">Agregar</a></div>
          
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-car"></i>Listado de {{$module}}</a></li>

@@ -29,7 +29,6 @@ $(document).ready( function () {
         var MovementsCash = $(this).data("id").split('/');
         var MovementsCash_id = MovementsCash[0];
         var MovementsCash_name = MovementsCash[1];
-
         $.get('listMovementsCash/' + MovementsCash_id +'/edit', function (data) {
             
             $('#contentDanger').hide();
@@ -79,7 +78,8 @@ $(document).ready( function () {
         $('#tittleMovementsCashHr').text('Registrar');
         $("#btn-movementscash").text("Registrar");
     
-        $.post(SITEURL + "/add",function(data){
+        var MovementsCash = $(this).data("id");
+        $.get('listMovementsCash/' + MovementsCash +'/edit', function (data) {
                 
             if(data.status.length > 0) {
                 $('#contentDanger').hide();

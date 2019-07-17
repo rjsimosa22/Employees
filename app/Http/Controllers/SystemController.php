@@ -62,12 +62,6 @@ class SystemController extends Controller
         $system=System::select('a.id','a.description','a.abreviation','a.date_edit as date','a.status')->from($bd.' as a')->orderby('a.description')->where('a.id','=',$id)->get();        
         return Response::json(['status'=>$status,'system'=>$system]);
     }
-
-    public function add()
-    {   
-        $status=Status::select('a.id','a.description')->from('status_globals as a')->orderby('a.description')->get();
-        return Response::json(['status'=>$status]);
-    }
     
     public function destroy(Request $request)
     { 

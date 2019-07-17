@@ -70,8 +70,8 @@ $(document).ready( function () {
         $('#tittleHorz').text('Registrar');
         $("#btn-system").text("Registrar");
 
-        $.post(SITEURL + "/add",function(data){
-            
+        var system = $(this).data("id");
+        $.get('listSystem/' + system +'/edit?id='+system+'&bd='+$('#DBactual').val(), function (data) {
             if(data.status.length > 0) {
                 $('#contentDanger').hide();
                 $('#contentSuccess').hide();
@@ -143,7 +143,7 @@ $(document).ready( function () {
         var Systemabreviation=$('#Systemabreviation').val();
 
         var yes=1;
-        if(!Systemdescription || !Systemabreaviation || !Systemstatus) {
+        if(!Systemdescription || !Systemabreviation || !Systemstatus) {
             yes=0;
         } 
     

@@ -14,7 +14,6 @@ class MovementsCashController extends Controller
 
     public function index()
     {  
-     
         $options='system';
         $selects='MovementsCashList';
         if(request()->ajax()) {
@@ -26,13 +25,6 @@ class MovementsCashController extends Controller
         }
         
         return view('movementscash.index',['options'=>$options,'selects'=>$selects]);
-    }
-
-    public function add()
-    {   
-        $status=Status::select('a.id','a.description')->from('status_globals as a')->orderby('a.description')->get();
-        $TypeMovement=TypeMovement::select('a.id','a.description')->from('type_movement as a')->orderby('a.description')->get();
-        return Response::json(['TypeMovement'=>$TypeMovement,'status'=>$status]);
     }
     
     public function store(Request $request)
@@ -52,8 +44,7 @@ class MovementsCashController extends Controller
                 'abreviation' => $MovementsCashabreviation,
                 'description' => $MovementsCashdescription
             ]
-        ); 
-             
+        );      
         return Response::json($MovementsCash);
     }
     

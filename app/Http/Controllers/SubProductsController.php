@@ -64,14 +64,7 @@ class SubProductsController extends Controller
         $subproducts=SubProducts::select('a.id','a.id_product','a.description','a.abreviation','a.status')->from('sublines_product as a')->orderby('a.description')->where('a.id','=',$id)->get();        
         return Response::json(['subproducts'=>$subproducts,'products'=>$products,'status'=>$status]);
     }
-    
-    public function add()
-    {   
-        $status=Status::select('a.id','a.description')->from('status_globals as a')->orderby('a.description')->get();
-        $products=Products::select('a.id','a.description')->from('lines_product as a')->orderby('a.description')->get();
-        return Response::json(['products'=>$products,'status'=>$status]);
-    }
-    
+        
     public function destroy($id)
     {
         $subproducts = SubProducts::where('id',$id)->delete();

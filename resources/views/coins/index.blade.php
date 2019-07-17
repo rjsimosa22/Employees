@@ -8,7 +8,7 @@
  <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>Listado  de Monedas</h1>
-        <div style="margin-top:10px" align='right'><a href="#editCoins" rel="modal:open" data-toggle="tooltip" title="Agregar" class="edit btn btn-primary add-coins">Agregar</a></div>
+        <div style="margin-top:10px" align='right'><a href="#editCoins" rel="modal:open" data-id='0' data-toggle="tooltip" title="Agregar" class="add btn btn-primary add-coins">Agregar</a></div>
         
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-car"></i>Monedas</a></li>

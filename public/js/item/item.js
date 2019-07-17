@@ -93,13 +93,15 @@ $(document).ready( function () {
     });
 
     $('body').on('click', '.add-items', function () {
+
         $('#contentDanger').hide();
         $('#contentSuccess').hide();
         $('#btn-items').val('Registrar');
         $('#btn-items').text('Registrar');
-    
-        $.post(SITEURL + "/add",function(data){
-                
+        
+        var item = $(this).data("id");
+        $.get('listItems/' + item +'/edit', function (data) {
+
             if(data.status.length > 0) {
                 $('#contentDanger').hide();
                 $('#contentSuccess').hide();

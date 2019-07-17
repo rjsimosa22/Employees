@@ -66,8 +66,8 @@ $(document).ready( function () {
         $('#tittleCoins').text('Registrar');
         $('#tittleCoinsHr').text('Registrar');
         $("#btn-coins").text("Registrar");
-    
-        $.post(SITEURL + "/add",function(data){
+        var coins = $(this).data("id");
+        $.get('listCoins/' + coins +'/edit', function (data) {
                 
             if(data.status.length > 0) {
                 $('#contentDanger').hide();

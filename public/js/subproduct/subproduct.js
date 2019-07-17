@@ -30,7 +30,6 @@ $(document).ready( function () {
         var subproduct = $(this).data("id").split('/');
         var subproduct_id = subproduct[0];
         var subproduct_name = subproduct[1];
-
         $.get('listSubProducts/' + subproduct_id +'/edit', function (data) {
             
             $('#contentDanger').hide();
@@ -81,7 +80,8 @@ $(document).ready( function () {
         $('#btn-subproduct').val('Registrar');
         $('#btn-subproduct').text('Registrar');
     
-        $.post(SITEURL + "/add",function(data){
+        var subproduct = $(this).data("id");
+        $.get('listSubProducts/' + subproduct +'/edit', function (data) {
                 
             if(data.status.length > 0) {
                 $('#contentDanger').hide();

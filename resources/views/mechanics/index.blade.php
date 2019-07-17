@@ -8,7 +8,7 @@
  <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>Listado de Mecánicos</h1>
-        <div style="margin-top:10px" align='right'><a href="#editMechanics" rel="modal:open" data-toggle="tooltip" title="Agregar" class="edit btn btn-primary add-mechanics">Agregar</a></div>
+        <div style="margin-top:10px" align='right'><a href="#editMechanics" rel="modal:open" data-id="0" data-toggle="tooltip" title="Agregar" class="edit btn btn-primary add-mechanics">Agregar</a></div>
         
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-car"></i>Mecánicos</a></li>

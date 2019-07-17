@@ -8,7 +8,7 @@
  <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>Listado Asesores de Servicio</h1>
-        <div style="margin-top:10px" align='right'><a href="#editAdvisors" rel="modal:open" data-toggle="tooltip" title="Agregar" class="edit btn btn-primary add-advisors">Agregar</a></div>
+        <div style="margin-top:10px" align='right'><a href="#editAdvisors" rel="modal:open" data-id='0' data-toggle="tooltip" title="Agregar" class="add btn btn-primary add-advisors">Agregar</a></div>
         
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-car"></i>Asesores de Servicio</a></li>

@@ -66,14 +66,7 @@ class MechanicsController extends Controller
         $mechanics=Mechanics::select('a.id','a.description','a.abreviation','a.id_commission','a.status')->from('mechanics as a')->orderby('a.description')->where('a.id','=',$id)->get();        
         return Response::json(['mechanics'=>$mechanics,'commission'=>$commission,'status'=>$status]);
     }
-    
-    public function add()
-    {   
-        $status=Status::select('a.id','a.description')->from('status_globals as a')->orderby('a.description')->get();
-        $commission=Mechanics::select('a.id','a.description')->from('commission as a')->orderby('a.description')->get();
-       return Response::json(['commission'=>$commission,'status'=>$status]);
-    }
-    
+   
     public function destroy($id)
     {
         $mechanics = Mechanics::where('id',$id)->delete();

@@ -64,12 +64,6 @@ class AdvisorsController extends Controller
         return Response::json(['advisors'=>$advisors,'status'=>$status]);
     }
     
-    public function add()
-    {   
-        $status=Status::select('a.id','a.description')->from('status_globals as a')->orderby('a.description')->get();
-        return Response::json(['status'=>$status]);
-    }
-    
     public function destroy($id)
     {
         $advisors = Advisors::where('id',$id)->delete();

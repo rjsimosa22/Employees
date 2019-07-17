@@ -26,12 +26,10 @@ $(document).ready( function () {
     });
         
     $('body').on('click', '.edit-mechanics', function () {
-       
-        var item = $(this).data("id").split('/');
-        var item_id = item[0];
-        var item_name = item[1];
-
-        $.get('listMechanics/' + item_id +'/edit', function (data) {
+        var mechanics = $(this).data("id").split('/');
+        var mechanics_id = mechanics[0];
+        var mechanics_name = mechanics[1];
+        $.get('listMechanics/' + mechanics_id +'/edit', function (data) {
             
             $('#contentDanger').hide();
             $('#contentSuccess').hide();
@@ -80,8 +78,9 @@ $(document).ready( function () {
         $('#contentSuccess').hide();
         $('#btn-mechanics').val('Registrar');
         $('#btn-mechanics').text('Registrar');
-    
-        $.post(SITEURL + "/add",function(data){
+
+        var mechanics = $(this).data("id");
+        $.get('listMechanics/' + mechanics +'/edit', function (data) {
                 
             if(data.status.length > 0) {
                 $('#contentDanger').hide();

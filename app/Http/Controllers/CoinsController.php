@@ -63,13 +63,7 @@ class CoinsController extends Controller
         $coins=Coins::select('a.id','a.description','a.abreviation','a.symbol','a.status')->from('coins as a')->orderby('a.description')->where('a.id','=',$id)->get();        
         return Response::json(['coins'=>$coins,'status'=>$status]);
     }
-    
-    public function add()
-    {   
-        $status=Status::select('a.id','a.description')->from('status_globals as a')->orderby('a.description')->get();
-        return Response::json(['status'=>$status]);
-    }
-    
+  
     public function destroy($id)
     {
         $coins = Coins::where('id',$id)->delete();

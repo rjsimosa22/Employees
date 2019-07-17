@@ -30,7 +30,6 @@ $(document).ready( function () {
         var advisors = $(this).data("id").split('/');
         var advisors_id = advisors[0];
         var advisors_name = advisors[1];
-
         $.get('listAdvisors/' + advisors_id +'/edit', function (data) {
             
             $('#contentDanger').hide();
@@ -66,8 +65,8 @@ $(document).ready( function () {
         $('#tittleAdvisors').text('Registrar');
         $('#tittleAdvisorsHr').text('Registrar');
         $("#btn-advisors").text("Registrar");
-    
-        $.post(SITEURL + "/add",function(data){
+        var advisors = $(this).data("id");
+        $.get('listAdvisors/' + advisors +'/edit', function (data) {
                 
             if(data.status.length > 0) {
                 $('#contentDanger').hide();
